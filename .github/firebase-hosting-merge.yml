@@ -1,0 +1,32 @@
+name: Deploy to Firebase Hosting on Merge
+on:
+  push:
+    branches:
+      - main # 오직 main 브랜치에 푸시될 때만 운영 배포
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # pnpm 설치 및 설정
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: ./website
+
+      - name: Build
+        run: pnpm build
+        working-directory: ./website
+
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GDGOC_CUK_WEBSITE }}' # CLI가 생성한 시크릿 이름 확인 필요
+          projectId: gdgoc-cuk-website # init 할 때 선택한 프로젝트 ID로 변경
+          channelId: live # 운영 서버(Live Channel)로 배포
+          entryPoint: ./website
