@@ -23,9 +23,16 @@ export function VenueSection() {
             경기 부천시 원미구 지봉로 43 <br />
             가톨릭대학교 성심교정
           </p>
-          <Button variant="outline" className="w-full">
-            Open in Maps <ExternalLink className="w-4 h-4" />
-          </Button>
+          <a
+            href="https://map.kakao.com/?rt=,,456286,1107431&rt1=&rt2=가톨릭대학교 성심교정&rtIds=,11344864"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Button variant="outline" className="w-full">
+              Open in Maps <ExternalLink className="w-4 h-4" />
+            </Button>
+          </a>
         </div>
       </Card>
     </section>
