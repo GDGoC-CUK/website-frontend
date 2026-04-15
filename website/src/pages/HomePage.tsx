@@ -1,4 +1,4 @@
-export default function Root() {
+export default function HomePage() {
   return (
     <>
         <div>Hello React</div>
