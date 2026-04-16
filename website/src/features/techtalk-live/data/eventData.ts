@@ -7,7 +7,22 @@ export const schedule = [
 ];
 
 export const speakers = [
-  { name: "김한솔", job: "ASEC 분석팀 연구원 @ AhnLab", desc: "악성코드 분석, 공격 그룹 추적, 안랩 제품 진단 반영 및 개선" },
-  { name: "강성욱", job: "엔지니어링 매니저 @ Worxphere", desc: "AX Infra 실장, K-DEVCON Founder" },
-  { name: "한상준", job: "연구소장 @ POSTMATH", desc: "AI Lead, Infra / 백엔드 아키텍처 설계" },
+  {
+    name: "김한솔",
+    job: "ASEC 분석팀 연구원 @ AhnLab",
+    desc: "악성코드 분석, 공격 그룹 추적, 안랩 제품 진단 반영 및 개선",
+    gradientClass: "from-google-blue via-google-yellow-light to-google-red",
+  },
+  {
+    name: "강성욱",
+    job: "엔지니어링 매니저 @ Worxphere",
+    desc: "AX Infra 실장, K-DEVCON Founder",
+    gradientClass: "from-google-yellow via-google-red-light to-google-blue",
+  },
+  {
+    name: "한상준",
+    job: "연구소장 @ POSTMATH",
+    desc: "AI Lead, Infra / 백엔드 아키텍처 설계",
+    gradientClass: "from-google-red via-google-blue-light to-google-yellow",
+  },
 ];
