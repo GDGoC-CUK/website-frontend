@@ -14,7 +14,7 @@ export function SpeakerSection() {
             <Card className="items-start gap-5">
               <div className="flex flex-col items-center text-center">
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 rounded-full p-1 bg-gradient-to-tr from-google-blue via-google-red to-google-yellow" />
+                  <div className={`w-16 h-16 rounded-full p-1 bg-gradient-to-tr ${item.gradientClass}`} />
                   <div className="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-google-blue flex items-center justify-center border-4 border-neutral-950 shadow-xl">
                     <Zap className="w-4 h-4 text-white fill-current" />
                   </div>
